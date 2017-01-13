@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66717E681E299A1F00291A29 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66717E671E299A1F00291A29 /* SettingsViewController.m */; };
 		66B6A0A41E28762700EE2668 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6A0A31E28762700EE2668 /* main.m */; };
 		66B6A0A71E28762700EE2668 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6A0A61E28762700EE2668 /* AppDelegate.m */; };
-		66B6A0AA1E28762700EE2668 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6A0A91E28762700EE2668 /* ViewController.m */; };
+		66B6A0AA1E28762700EE2668 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6A0A91E28762700EE2668 /* TipViewController.m */; };
 		66B6A0AD1E28762700EE2668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B6A0AB1E28762700EE2668 /* Main.storyboard */; };
 		66B6A0AF1E28762700EE2668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B6A0AE1E28762700EE2668 /* Assets.xcassets */; };
 		66B6A0B21E28762700EE2668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B6A0B01E28762700EE2668 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66717E661E299A1F00291A29 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		66717E671E299A1F00291A29 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		66B6A09F1E28762700EE2668 /* tipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B6A0A31E28762700EE2668 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66B6A0A51E28762700EE2668 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		66B6A0A61E28762700EE2668 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		66B6A0A81E28762700EE2668 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		66B6A0A91E28762700EE2668 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		66B6A0A81E28762700EE2668 /* TipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		66B6A0A91E28762700EE2668 /* TipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
 		66B6A0AC1E28762700EE2668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66B6A0AE1E28762700EE2668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B6A0B11E28762700EE2668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,13 +63,15 @@
 			children = (
 				66B6A0A51E28762700EE2668 /* AppDelegate.h */,
 				66B6A0A61E28762700EE2668 /* AppDelegate.m */,
-				66B6A0A81E28762700EE2668 /* ViewController.h */,
-				66B6A0A91E28762700EE2668 /* ViewController.m */,
+				66B6A0A81E28762700EE2668 /* TipViewController.h */,
+				66B6A0A91E28762700EE2668 /* TipViewController.m */,
 				66B6A0AB1E28762700EE2668 /* Main.storyboard */,
 				66B6A0AE1E28762700EE2668 /* Assets.xcassets */,
 				66B6A0B01E28762700EE2668 /* LaunchScreen.storyboard */,
 				66B6A0B31E28762700EE2668 /* Info.plist */,
 				66B6A0A21E28762700EE2668 /* Supporting Files */,
+				66717E661E299A1F00291A29 /* SettingsViewController.h */,
+				66717E671E299A1F00291A29 /* SettingsViewController.m */,
 			);
 			path = tipCalculator;
 			sourceTree = "<group>";
@@ -151,9 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B6A0AA1E28762700EE2668 /* ViewController.m in Sources */,
+				66B6A0AA1E28762700EE2668 /* TipViewController.m in Sources */,
 				66B6A0A71E28762700EE2668 /* AppDelegate.m in Sources */,
 				66B6A0A41E28762700EE2668 /* main.m in Sources */,
+				66717E681E299A1F00291A29 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				66B6A0B81E28762700EE2668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
