@@ -28,6 +28,10 @@
     self.tipControl.selectedSegmentIndex = savedDefaultTipChoice;
 
     [self updateValues];
+
+    // focus the bill field
+    [self.billTextField becomeFirstResponder];
+
 }
 
 - (void)didReceiveMemoryWarning {
