@@ -48,6 +48,10 @@
     [self updateValues];
 }
 
+- (IBAction)billChanged:(id)sender {
+    [self updateValues];
+}
+
 - (void)updateValues {
     float billAmount = [self.billTextField.text floatValue];
     NSArray *TipValues = @[@(0.15), @(0.2), @(0.25)];
