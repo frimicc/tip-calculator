@@ -26,6 +26,7 @@ The following **additional** features are implemented:
 - [x] Tip and total auto-update as you type.
 - [x] Close button for quickly starting over.
 - [x] Changed to decimal keyboard for entering decimal points.
+- [x] When default tip is changed it also changes current tip.
 
 ## Video Walkthrough 
 
