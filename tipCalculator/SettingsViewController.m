@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 
 @interface SettingsViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
 
 @end
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger savedDefaultTipChoice = [defaults integerForKey:@"defaultTipChoice"];
+    _defaultTipControl.selectedSegmentIndex = savedDefaultTipChoice;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +29,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)onTipChanged:(id)sender {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:_defaultTipControl.selectedSegmentIndex forKey:@"defaultTipChoice"];
+    [defaults synchronize];
+
+    id<SettingsViewControllerDelegate> strongDelegate = self.delegate;
+
+    if ([strongDelegate respondsToSelector:@selector(SettingsViewController:defaultTipDidChange:)]) {
+        [strongDelegate SettingsViewController:self defaultTipDidChange:self.defaultTipControl.selectedSegmentIndex];
+    }
+
 }
-*/
 
 @end

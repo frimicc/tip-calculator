@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsViewController.h"
 
-@interface TipViewController : UIViewController
+@interface TipViewController : UIViewController <SettingsViewControllerDelegate>
 
 
 @end

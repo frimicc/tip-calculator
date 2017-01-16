@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol SettingsViewControllerDelegate;
+
 @interface SettingsViewController : UIViewController
+
+@property (nonatomic, weak) id<SettingsViewControllerDelegate> delegate;
+
+- (IBAction)onTipChanged:(id)sender;
+
+@end
+
+@protocol SettingsViewControllerDelegate <NSObject>
+
+- (void)SettingsViewController:(SettingsViewController*)viewController
+             defaultTipDidChange:(NSInteger)value;
 
 @end

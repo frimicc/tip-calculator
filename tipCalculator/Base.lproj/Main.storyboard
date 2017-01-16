@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tip View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TipViewController" sceneMemberID="viewController">
@@ -87,7 +87,13 @@
                             <outletCollection property="gestureRecognizers" destination="7cy-RI-rqB" appends="YES" id="FJL-1M-0Rh"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="t41-AI-5a6"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="t41-AI-5a6">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="GfP-Gs-p6c">
+                            <connections>
+                                <segue destination="XPn-aC-yq3" kind="show" id="VyH-xG-kiL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billTextField" destination="gro-0p-d35" id="Wxh-UX-CyO"/>
                         <outlet property="tipControl" destination="PKE-Sj-hoE" id="Tdw-Cc-sf0"/>
@@ -105,22 +111,46 @@
             <point key="canvasLocation" x="1005" y="705"/>
         </scene>
         <!--Settings View Controller-->
-        <scene sceneID="Mg1-zw-qEc">
+        <scene sceneID="lBp-hn-TFn">
             <objects>
-                <viewController id="2oK-NJ-Gee" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="XPn-aC-yq3" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jnk-Yi-2Rc"/>
-                        <viewControllerLayoutGuide type="bottom" id="u3q-p5-sea"/>
+                        <viewControllerLayoutGuide type="top" id="pi0-Gf-VZe"/>
+                        <viewControllerLayoutGuide type="bottom" id="AzN-iX-OjP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8la-wy-b6A">
+                    <view key="view" contentMode="scaleToFill" id="tu9-P1-sdW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-l1-AzE">
+                                <rect key="frame" x="34" y="110" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aR1-vK-7nd">
+                                <rect key="frame" x="131" y="106" width="155" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onTipChanged:" destination="XPn-aC-yq3" eventType="valueChanged" id="jtU-lf-Lr2"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTipControl" destination="aR1-vK-7nd" id="bzV-Kd-c04"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K2W-mY-DXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lko-vm-ImD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="1420"/>
+            <point key="canvasLocation" x="1005" y="1530"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kFy-Uc-nmN">

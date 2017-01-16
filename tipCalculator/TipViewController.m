@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tip Calculator";
+
+    // get default value when view is created
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger savedDefaultTipChoice = [defaults integerForKey:@"defaultTipChoice"];
+    self.tipControl.selectedSegmentIndex = savedDefaultTipChoice;
+
     [self updateValues];
 }
 
@@ -46,6 +52,23 @@
 
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount ];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount ];
+
+}
+
+// Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    SettingsViewController *settingsViewController = [segue destinationViewController];
+    settingsViewController.delegate = self;
+
+}
+
+// Implement the delegate methods for SettingsViewControllerDelegate
+- (void)SettingsViewController:(SettingsViewController *)viewController defaultTipDidChange:(NSInteger)value {
+
+    self.tipControl.selectedSegmentIndex = value;
+    [self updateValues];
 
 }
 
