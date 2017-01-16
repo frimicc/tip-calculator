@@ -25,12 +25,13 @@ The following **additional** features are implemented:
 - [x] Made fields resize for larger screens.
 - [x] Tip and total auto-update as you type.
 - [x] Close button for quickly starting over.
+- [x] Changed to decimal keyboard for entering decimal points.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='tip_calculator_walk_through.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
