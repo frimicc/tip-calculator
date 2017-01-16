@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property float billAmount;
 
 @end
 
@@ -53,10 +54,10 @@
 }
 
 - (void)updateValues {
-    float billAmount = [self.billTextField.text floatValue];
+    self.billAmount = [self.billTextField.text floatValue];
     NSArray *TipValues = @[@(0.15), @(0.2), @(0.25)];
-    float tipAmount = [TipValues[self.tipControl.selectedSegmentIndex] floatValue] * billAmount;
-    float totalAmount = billAmount + tipAmount;
+    float tipAmount = [TipValues[self.tipControl.selectedSegmentIndex] floatValue] * self.billAmount;
+    float totalAmount = self.billAmount + tipAmount;
 
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount ];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount ];
